@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22C2062157900F8CC13 /* AppDelegate.swift */; };
-		CB96D22F2062157900F8CC13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22E2062157900F8CC13 /* ViewController.swift */; };
+		CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */; };
 		CB96D2322062157900F8CC13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2302062157900F8CC13 /* Main.storyboard */; };
 		CB96D2352062157900F8CC13 /* postlaju.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB96D2332062157900F8CC13 /* postlaju.xcdatamodeld */; };
-		CB96D2372062157900F8CC13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2362062157900F8CC13 /* Assets.xcassets */; };
 		CB96D23A2062157900F8CC13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2382062157900F8CC13 /* LaunchScreen.storyboard */; };
 		CB96D2452062157900F8CC13 /* postlajuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D2442062157900F8CC13 /* postlajuUITests.swift */; };
+		CB96D25020622B7B00F8CC13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */; };
+		CB96D25220622B8500F8CC13 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D25120622B8500F8CC13 /* SignupViewController.swift */; };
+		CB96D2542062397600F8CC13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2532062397600F8CC13 /* Images.xcassets */; };
+		CBECBD72206249E300058511 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECBD71206249E300058511 /* AddViewController.swift */; };
+		CBECBD74206249FD00058511 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECBD73206249FD00058511 /* ExploreViewController.swift */; };
+		CBECBD7620624A2300058511 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECBD7520624A2300058511 /* ProfileViewController.swift */; };
+		CBECBD7820624A4500058511 /* IdeaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +35,21 @@
 /* Begin PBXFileReference section */
 		CB96D2292062157900F8CC13 /* postlaju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = postlaju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB96D22C2062157900F8CC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB96D22E2062157900F8CC13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListViewController.swift; sourceTree = "<group>"; };
 		CB96D2312062157900F8CC13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB96D2342062157900F8CC13 /* postlaju.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = postlaju.xcdatamodel; sourceTree = "<group>"; };
-		CB96D2362062157900F8CC13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB96D2392062157900F8CC13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB96D23B2062157900F8CC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB96D2402062157900F8CC13 /* postlajuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = postlajuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB96D2442062157900F8CC13 /* postlajuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postlajuUITests.swift; sourceTree = "<group>"; };
 		CB96D2462062157900F8CC13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CB96D25120622B8500F8CC13 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CB96D2532062397600F8CC13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBECBD71206249E300058511 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		CBECBD73206249FD00058511 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		CBECBD7520624A2300058511 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				CB96D22C2062157900F8CC13 /* AppDelegate.swift */,
-				CB96D22E2062157900F8CC13 /* ViewController.swift */,
 				CB96D2302062157900F8CC13 /* Main.storyboard */,
-				CB96D2362062157900F8CC13 /* Assets.xcassets */,
+				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
+				CB96D25120622B8500F8CC13 /* SignupViewController.swift */,
+				CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */,
+				CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */,
+				CBECBD71206249E300058511 /* AddViewController.swift */,
+				CBECBD73206249FD00058511 /* ExploreViewController.swift */,
+				CBECBD7520624A2300058511 /* ProfileViewController.swift */,
 				CB96D2382062157900F8CC13 /* LaunchScreen.storyboard */,
 				CB96D23B2062157900F8CC13 /* Info.plist */,
 				CB96D2332062157900F8CC13 /* postlaju.xcdatamodeld */,
+				CB96D2532062397600F8CC13 /* Images.xcassets */,
 			);
 			path = postlaju;
 			sourceTree = "<group>";
@@ -182,8 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB96D2542062397600F8CC13 /* Images.xcassets in Resources */,
 				CB96D23A2062157900F8CC13 /* LaunchScreen.storyboard in Resources */,
-				CB96D2372062157900F8CC13 /* Assets.xcassets in Resources */,
 				CB96D2322062157900F8CC13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,8 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB96D22F2062157900F8CC13 /* ViewController.swift in Sources */,
+				CB96D25020622B7B00F8CC13 /* LoginViewController.swift in Sources */,
+				CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */,
+				CBECBD72206249E300058511 /* AddViewController.swift in Sources */,
+				CB96D25220622B8500F8CC13 /* SignupViewController.swift in Sources */,
 				CB96D2352062157900F8CC13 /* postlaju.xcdatamodeld in Sources */,
+				CBECBD74206249FD00058511 /* ExploreViewController.swift in Sources */,
+				CBECBD7620624A2300058511 /* ProfileViewController.swift in Sources */,
+				CBECBD7820624A4500058511 /* IdeaDetailViewController.swift in Sources */,
 				CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZB2T23E2Q;
 				INFOPLIST_FILE = postlaju/Info.plist;
@@ -372,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZB2T23E2Q;
 				INFOPLIST_FILE = postlaju/Info.plist;

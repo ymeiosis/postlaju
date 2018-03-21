@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  IdeaListViewController.swift
 //  postlaju
 //
 //  Created by Ying Mei Lum on 21/03/2018.
