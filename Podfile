@@ -7,11 +7,12 @@ target 'postlaju' do
 
   # Pods for postlaju
 
-  target 'postlajuUITests' do
-    inherit! :search_paths
-    # Pods for testing
-pod 'FaceAware'
+  # Pods for postlaju Firebase
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'Firebase/Storage'
+pod 'GoogleSignIn'
 
-  end
 
 end

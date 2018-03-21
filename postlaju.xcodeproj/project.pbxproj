@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3AAE475AAFBA24CA2BB1981D /* Pods_postlaju.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0E48E8D4AA5F9554B18F6E /* Pods_postlaju.framework */; };
-		9B59A3F7E90D7113C9610C00 /* Pods_postlajuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097F88BDC89CD7F4CFCAFFC5 /* Pods_postlajuUITests.framework */; };
+		CB18C494206271CA0002EB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB18C493206271CA0002EB19 /* GoogleService-Info.plist */; };
+		CB18C4982062737E0002EB19 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C4972062737E0002EB19 /* Alert.swift */; };
 		CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22C2062157900F8CC13 /* AppDelegate.swift */; };
 		CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */; };
 		CB96D2322062157900F8CC13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2302062157900F8CC13 /* Main.storyboard */; };
@@ -36,9 +37,10 @@
 
 /* Begin PBXFileReference section */
 		097F88BDC89CD7F4CFCAFFC5 /* Pods_postlajuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_postlajuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D664D3A8A14CCF2A4191213 /* Pods-postlajuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postlajuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-postlajuUITests/Pods-postlajuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D0E48E8D4AA5F9554B18F6E /* Pods_postlaju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_postlaju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA0F8E9B5196D15F7EC8016 /* Pods-postlaju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postlaju.release.xcconfig"; path = "Pods/Target Support Files/Pods-postlaju/Pods-postlaju.release.xcconfig"; sourceTree = "<group>"; };
+		CB18C493206271CA0002EB19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB18C4972062737E0002EB19 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CB96D2292062157900F8CC13 /* postlaju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = postlaju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB96D22C2062157900F8CC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 		CBECBD73206249FD00058511 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		CBECBD7520624A2300058511 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailViewController.swift; sourceTree = "<group>"; };
-		F368C4BAE979D0AE55411505 /* Pods-postlajuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postlajuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-postlajuUITests/Pods-postlajuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6A824EBD0BEE80987D611E8 /* Pods-postlaju.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postlaju.debug.xcconfig"; path = "Pods/Target Support Files/Pods-postlaju/Pods-postlaju.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B59A3F7E90D7113C9610C00 /* Pods_postlajuUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +85,6 @@
 			children = (
 				F6A824EBD0BEE80987D611E8 /* Pods-postlaju.debug.xcconfig */,
 				8AA0F8E9B5196D15F7EC8016 /* Pods-postlaju.release.xcconfig */,
-				3D664D3A8A14CCF2A4191213 /* Pods-postlajuUITests.debug.xcconfig */,
-				F368C4BAE979D0AE55411505 /* Pods-postlajuUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -126,6 +124,7 @@
 				CB96D22C2062157900F8CC13 /* AppDelegate.swift */,
 				CB96D2302062157900F8CC13 /* Main.storyboard */,
 				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
+				CB18C4972062737E0002EB19 /* Alert.swift */,
 				CB96D25120622B8500F8CC13 /* SignupViewController.swift */,
 				CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */,
 				CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */,
@@ -133,6 +132,7 @@
 				CBECBD73206249FD00058511 /* ExploreViewController.swift */,
 				CBECBD7520624A2300058511 /* ProfileViewController.swift */,
 				CB96D2382062157900F8CC13 /* LaunchScreen.storyboard */,
+				CB18C493206271CA0002EB19 /* GoogleService-Info.plist */,
 				CB96D23B2062157900F8CC13 /* Info.plist */,
 				CB96D2332062157900F8CC13 /* postlaju.xcdatamodeld */,
 				CB96D2532062397600F8CC13 /* Images.xcassets */,
@@ -176,12 +176,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB96D24C2062157900F8CC13 /* Build configuration list for PBXNativeTarget "postlajuUITests" */;
 			buildPhases = (
-				D48DD5DC34FA25F0DA6CA468 /* [CP] Check Pods Manifest.lock */,
 				CB96D23C2062157900F8CC13 /* Sources */,
 				CB96D23D2062157900F8CC13 /* Frameworks */,
 				CB96D23E2062157900F8CC13 /* Resources */,
-				A78D20B8BFD5222922899871 /* [CP] Embed Pods Frameworks */,
-				8EF4A53EF24A28385B36A54E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB96D2542062397600F8CC13 /* Images.xcassets in Resources */,
+				CB18C494206271CA0002EB19 /* GoogleService-Info.plist in Resources */,
 				CB96D23A2062157900F8CC13 /* LaunchScreen.storyboard in Resources */,
 				CB96D2322062157900F8CC13 /* Main.storyboard in Resources */,
 			);
@@ -260,9 +258,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-postlaju/Pods-postlaju-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -275,9 +284,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-postlaju/Pods-postlaju-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -302,57 +314,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8EF4A53EF24A28385B36A54E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-postlajuUITests/Pods-postlajuUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A78D20B8BFD5222922899871 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-postlajuUITests/Pods-postlajuUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FaceAware/FaceAware.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaceAware.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-postlajuUITests/Pods-postlajuUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D48DD5DC34FA25F0DA6CA468 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-postlajuUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -368,6 +329,7 @@
 				CBECBD74206249FD00058511 /* ExploreViewController.swift in Sources */,
 				CBECBD7620624A2300058511 /* ProfileViewController.swift in Sources */,
 				CBECBD7820624A4500058511 /* IdeaDetailViewController.swift in Sources */,
+				CB18C4982062737E0002EB19 /* Alert.swift in Sources */,
 				CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +515,6 @@
 		};
 		CB96D24D2062157900F8CC13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D664D3A8A14CCF2A4191213 /* Pods-postlajuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -570,7 +531,6 @@
 		};
 		CB96D24E2062157900F8CC13 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F368C4BAE979D0AE55411505 /* Pods-postlajuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

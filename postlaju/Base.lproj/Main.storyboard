@@ -48,9 +48,6 @@
                                 <rect key="frame" x="305" y="573" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="h2S-bx-NUs" kind="show" id="99n-aU-fJu"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tsh-Jh-D5F">
                                 <rect key="frame" x="182" y="542" width="183" height="30"/>
@@ -68,6 +65,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="imz-Y0-oUV"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Tsh-Jh-D5F" id="dC7-fd-bNh"/>
+                        <outlet property="passwordTextField" destination="FhK-4u-wqn" id="JcD-4A-lha"/>
+                        <outlet property="signInButton" destination="i2f-zh-bcs" id="quZ-RA-eUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -514,20 +516,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1487716858-add-user_81636" translatesAutoresizingMaskIntoConstraints="NO" id="4qZ-3T-O6D">
-                                <rect key="frame" x="5" y="69" width="365" height="365"/>
+                                <rect key="frame" x="5" y="69" width="170" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="365" id="ydH-xU-7CA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9L-iM-aw9">
-                                <rect key="frame" x="5" y="726" width="365" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9L-iM-aw9">
+                                <rect key="frame" x="5" y="450" width="365" height="30"/>
                                 <state key="normal" title="Create Account"/>
-                                <connections>
-                                    <segue destination="h2S-bx-NUs" kind="show" id="r0r-wK-9co"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGk-kl-Eym">
-                                <rect key="frame" x="5" y="459" width="365" height="135"/>
+                                <rect key="frame" x="10" y="247" width="365" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-tg-4Li">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
@@ -614,6 +613,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GdX-zU-NpY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="cic-OZ-yHd" id="d98-jb-Tt7"/>
+                        <outlet property="firstnameTextField" destination="BQq-JN-I4z" id="LOv-YB-HSj"/>
+                        <outlet property="lastnameTextField" destination="bcH-C8-s6z" id="FqD-RQ-leO"/>
+                        <outlet property="passwordTextField" destination="IuZ-JX-Skw" id="EFx-WG-XRw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvY-Cx-KJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -640,7 +645,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="r7P-et-GRz">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="h2S-bx-NUs" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="h2S-bx-NUs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zgy-d1-ioN">
@@ -667,7 +672,4 @@
         <image name="icons8-plus" width="25" height="25"/>
         <image name="icons8-search_filled" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="r0r-wK-9co"/>
-    </inferredMetricsTieBreakers>
 </document>
