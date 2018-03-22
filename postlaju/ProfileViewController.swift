@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
-
+    @IBAction func logoutBtnTapped(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+            guard let navVC = sb.instantiateViewController(withIdentifier: "mainNavigationController") as? UINavigationController else {return}
+            present(navVC, animated: true, completion: nil)
+        } catch {
+        }
+    }
+    
+        var ref : DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

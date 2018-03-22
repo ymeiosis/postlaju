@@ -10,6 +10,9 @@
 		3AAE475AAFBA24CA2BB1981D /* Pods_postlaju.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0E48E8D4AA5F9554B18F6E /* Pods_postlaju.framework */; };
 		CB18C494206271CA0002EB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB18C493206271CA0002EB19 /* GoogleService-Info.plist */; };
 		CB18C4982062737E0002EB19 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C4972062737E0002EB19 /* Alert.swift */; };
+		CB18C49A206363360002EB19 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C499206363360002EB19 /* GetImage.swift */; };
+		CB18C49C206363C10002EB19 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C49B206363C10002EB19 /* Idea.swift */; };
+		CB18C49E20636B540002EB19 /* IdeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C49D20636B540002EB19 /* IdeaTableViewCell.swift */; };
 		CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22C2062157900F8CC13 /* AppDelegate.swift */; };
 		CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */; };
 		CB96D2322062157900F8CC13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2302062157900F8CC13 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		8AA0F8E9B5196D15F7EC8016 /* Pods-postlaju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-postlaju.release.xcconfig"; path = "Pods/Target Support Files/Pods-postlaju/Pods-postlaju.release.xcconfig"; sourceTree = "<group>"; };
 		CB18C493206271CA0002EB19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB18C4972062737E0002EB19 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CB18C499206363360002EB19 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
+		CB18C49B206363C10002EB19 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		CB18C49D20636B540002EB19 /* IdeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaTableViewCell.swift; sourceTree = "<group>"; };
 		CB96D2292062157900F8CC13 /* postlaju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = postlaju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB96D22C2062157900F8CC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListViewController.swift; sourceTree = "<group>"; };
@@ -123,10 +129,13 @@
 			children = (
 				CB96D22C2062157900F8CC13 /* AppDelegate.swift */,
 				CB96D2302062157900F8CC13 /* Main.storyboard */,
-				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
+				CB18C499206363360002EB19 /* GetImage.swift */,
 				CB18C4972062737E0002EB19 /* Alert.swift */,
+				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
 				CB96D25120622B8500F8CC13 /* SignupViewController.swift */,
 				CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */,
+				CB18C49D20636B540002EB19 /* IdeaTableViewCell.swift */,
+				CB18C49B206363C10002EB19 /* Idea.swift */,
 				CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */,
 				CBECBD71206249E300058511 /* AddViewController.swift */,
 				CBECBD73206249FD00058511 /* ExploreViewController.swift */,
@@ -323,11 +332,14 @@
 			files = (
 				CB96D25020622B7B00F8CC13 /* LoginViewController.swift in Sources */,
 				CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */,
+				CB18C49A206363360002EB19 /* GetImage.swift in Sources */,
+				CB18C49E20636B540002EB19 /* IdeaTableViewCell.swift in Sources */,
 				CBECBD72206249E300058511 /* AddViewController.swift in Sources */,
 				CB96D25220622B8500F8CC13 /* SignupViewController.swift in Sources */,
 				CB96D2352062157900F8CC13 /* postlaju.xcdatamodeld in Sources */,
 				CBECBD74206249FD00058511 /* ExploreViewController.swift in Sources */,
 				CBECBD7620624A2300058511 /* ProfileViewController.swift in Sources */,
+				CB18C49C206363C10002EB19 /* Idea.swift in Sources */,
 				CBECBD7820624A4500058511 /* IdeaDetailViewController.swift in Sources */,
 				CB18C4982062737E0002EB19 /* Alert.swift in Sources */,
 				CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */,
