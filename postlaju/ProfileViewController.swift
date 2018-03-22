@@ -12,6 +12,13 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class ProfileViewController: UIViewController {
+    var ideas : [Idea] = []
+    
+    var ref : DatabaseReference!
+    
+    var currentUserID : String = ""
+
+    
     @IBAction func logoutBtnTapped(_ sender: Any) {
         do{
             try Auth.auth().signOut()
@@ -22,12 +29,23 @@ class ProfileViewController: UIViewController {
         }
     }
     
-        var ref : DatabaseReference!
+    @IBOutlet weak var imageview: UIImageView!
+    
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var firstname: UILabel!
+    @IBOutlet weak var lastname: UILabel!
+    
+    @IBAction func editBtn(_ sender: Any) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        
+        if (Auth.auth().currentUser?.uid) != nil {
+            currentUserID = (Auth.auth().currentUser?.uid)!
+            observeCurrentUserInfo()
+        }
         
     }
 
@@ -36,15 +54,7 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func observeCurrentUserInfo() {
+        
     }
-    */
-
 }
