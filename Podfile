@@ -14,5 +14,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'GoogleSignIn'
 
+#test pods
+pod 'FLAnimatedImage', '~> 1.0'
+
 
 end

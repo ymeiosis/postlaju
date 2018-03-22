@@ -10,6 +10,7 @@ import UIKit
 import FirebaseStorage
 import FirebaseDatabase
 import FirebaseAuth
+//import FLAnimatedImage
 
 class ProfileViewController: UIViewController {
     var ideas : [Idea] = []
@@ -55,6 +56,22 @@ class ProfileViewController: UIViewController {
     }
     
     func observeCurrentUserInfo() {
-        
+        let donor = Auth.auth().currentUser
+        if let donor = donor {
+            let currentUserID = donor.uid
+            
+            ref.child("Donor").child(currentUserID).observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let value = snapshot.value as? [String : Any] else {return}
+                let profilePicURL = value["DonorProfileURL"] as? String ?? ""
+                
+                self.nameLabel.text = value["Username"] as? String ?? ""
+                self.bloodTypeLabel.text = value["BloodType"] as? String ?? ""
+                self.dateLabel.text = value["LastDonation"] as? String ?? ""
+                self.getImage(profilePicURL, self.profileImageView)
+                
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+        }
     }
 }
