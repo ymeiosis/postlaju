@@ -78,9 +78,13 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate {
         if !email.contains("@") {
             //show error //if email not contain @
             showAlert(withTitle: "Invalid Email format", message: "Please input valid Email")
-        } else if password.count < 7 {
+        } else if firstname.count == 0 {
+            showAlert(withTitle: "Invalid First Name", message: "Please input First Name")
+        } else if lastname.count == 0 {
+            showAlert(withTitle: "Invalid Last Name", message: "Please input Last Name")
+        } else if password.count < 6 {
             //show error
-            showAlert(withTitle: "Invalid Password", message: "Password must contain 6 characters")
+            showAlert(withTitle: "Invalid Password", message: "Password must contain 6 characters or more")
         } else {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                 //ERROR HANDLING
@@ -95,6 +99,9 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate {
                     self.lastnameTextField.text = ""
                     self.passwordTextField.text = ""
                      
+                    if let image = self.imageView.image {
+                        self.uploadToStorage(image)
+                    }
                     
                     let userPost: [String:Any] = ["email": email, "firstname":firstname, "lastname":lastname]
                     
