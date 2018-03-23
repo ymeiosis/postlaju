@@ -43,6 +43,7 @@ class SignupViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
         ref = Database.database().reference()
         imagePicker.delegate = self
         // Tap on the side to dismiss keyboard

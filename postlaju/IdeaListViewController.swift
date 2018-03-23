@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import FLAnimatedImage
 
 
 class IdeaListViewController: UIViewController, UITableViewDataSource {
@@ -17,23 +18,26 @@ class IdeaListViewController: UIViewController, UITableViewDataSource {
     
     var ref : DatabaseReference!
     var ideas : [Idea] = []
+    @IBOutlet weak var imageview: FLAnimatedImage!
     
-    @IBOutlet weak var tableview: UITableView!
-//        {
-//        didSet {
-//            tableView.dataSource = self
-//            tableView.delegate = self
-//
-//        }
-//    }
+    @IBOutlet weak var searchbar: UISearchBar!
+    
+    @IBOutlet weak var tableview: UITableView! {
+        didSet {
+            tableview.dataSource = self
+            tableview.delegate = self
+            tableview.rowHeight = 75
+            
+        }
+    }
     
         
         override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        tableview.rowHeight = 150
         observeIdeas()
-        tableview.dataSource = self
+        FLAnimated()
+            self.navigationController?.isNavigationBarHidden = true
 
         }
         
@@ -41,29 +45,43 @@ class IdeaListViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         }
+    func FLAnimated() {
         
+    }
+    
+    
         func observeIdeas() {
             
-            guard let userID = Auth.auth().currentUser?.uid else {return}
+//            guard let userID = Auth.auth().currentUser?.uid else {return}
 
-            ref.child("users").child(userID).child("ideas").observe(.childAdded) { (snapshot) in
-                guard let patientDrugDict = snapshot.value as? [String:Any] else {return}
-                guard let dosage = patientDrugDict["Dosage"] as? String else {return}
-                print("the medicine amount is \(dosage)")
-                
-                
-//                self.ref.child("ideas").child(snapshot.key).child(dosage).observe(.value, with: { (drugSnapshot) in
-//                    guard let ideasDict = drugSnapshot.value as? [String:Any] else {return}
-//                    let idea = Idea
-//                    (uid: snapshot.key, patientDrugDict: patientDrugDict, dict: drugsDict)
+//            ref.child("users").child(userID).child("ideas").observe(.childAdded) { (snapshot) in
+//                guard let ideaDict = snapshot.value as? [String:Any] else {return}
+//                guard let anidea = Idea(uid: snapshot.key, dict: ideaDict) as? String else {return}
+//                print("the idea is \(anidea)")
 //
-//                    DispatchQueue.main.async {
-//                        self.ideas.append(idea)
-//                        let indexPath = IndexPath(row: self.drugs.count - 1, section: 0)
-//                        self.tableview.insertRows(at: [indexPath], with: .automatic)
-//                    }
-//                })
-                
+            
+//                ref.child("users").child(userID).child("ideas").observe(.childAdded) { (snapshot) in
+//                    guard let userDict = snapshot.value as? [String:Any] else {return}
+//                    guard let anidea = userDict["idea"] as? String else {return}
+//                    print("the title is \(anidea)")
+//
+//
+//                    self.ref.child("ideas").child(snapshot.key).child(anidea).observe(.value, with: { (ideaSnapshot) in
+//                        guard let ideaDict = ideaSnapshot.value as? [String:Any] else {return}
+//                        let idea = Idea(uid: snapshot.key, userDict: userDict, dict: ideaDict)
+            if let uid = Auth.auth().currentUser?.uid {
+                ref.child("users/\(uid)/ideas").observe(.childAdded, with: { (snapshot) in
+                    
+                    guard let ideaDict = snapshot.value as? [String : Any] else {return}
+                    let anidea = Idea(uid: snapshot.key, dict: ideaDict)
+                    
+                        DispatchQueue.main.async {
+                        self.ideas.append(anidea)
+                        let indexPath = IndexPath(row: self.ideas.count - 1, section: 0)
+                        self.tableview.insertRows(at: [indexPath], with: .automatic)
+                    }
+                })
+            
                 self.tableview.reloadData()
             }
     }
@@ -78,42 +96,22 @@ class IdeaListViewController: UIViewController, UITableViewDataSource {
         
         cell.title.text = ideas[indexPath.row].caption
         cell.status.text = ideas[indexPath.row].status
-        
         cell.date.text = String(ideas[indexPath.row].timestamp)
         
-        
-//        let ideaUID = ideas[indexPath.row].uid
-//
-//        ref.child("ideas").child(ideaUID).child("Donor").observe(.value, with: { (snapshot) in
-//            let donationCount = snapshot.childrenCount
-//            print("Donation Count: \(donationCount)")
-//            cell.countLabel.text = "\(donationCount)"
-//        })
-    
         return cell
     }
-    
-
 }
 
-//extension IdeaListViewController : UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
+extension IdeaListViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
 //        guard let cell = tableView.cellForRow(at: indexPath) as? IdeaTableViewCell else {return}
 //        cell.contentView.backgroundColor = UIColor.colourSelection()
-//
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController else {return}
-//
-//        let eventDonor = hospitalEvents[indexPath.row]
-//
-//        vc.selectedEvent = eventDonor
-//
-//        //        DispatchQueue.main.async {
-//
-//        self.navigationController?.pushViewController(vc, animated: true)
-//
-//        //    }
-//    }
-//
-//}
+
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "IdeaDetailViewController") as? IdeaDetailViewController else {return}
+        let selectedIdea = ideas[indexPath.row]
+        vc.selectedIdea = selectedIdea
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
 

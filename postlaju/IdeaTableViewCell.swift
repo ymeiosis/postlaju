@@ -11,7 +11,8 @@ import FirebaseAuth
 import FirebaseDatabase
 
 
-class IdeaTableViewCell: UITableViewCell {
+class IdeaTableViewCell: UITableViewCell{
+        
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var status: UILabel!

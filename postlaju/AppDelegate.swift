@@ -9,7 +9,10 @@
 import UIKit
 import CoreData
 import Firebase
-//import FLAnimatedImage
+import Pastel
+import Gifu
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

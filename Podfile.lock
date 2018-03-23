@@ -33,6 +33,7 @@ PODS:
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - FLAnimatedImage (1.0.12)
+  - Gifu (3.0.0)
   - GoogleSignIn (4.1.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -61,6 +62,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Pastel (0.4.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -68,7 +70,9 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - FLAnimatedImage (~> 1.0)
+  - Gifu
   - GoogleSignIn
+  - Pastel
 
 SPEC CHECKSUMS:
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
@@ -79,13 +83,15 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
   FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  Gifu: 6543ca2056a3d697097c09fe543ef49348ccc892
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Pastel: 7fa5e26123b3dbe11f7ed255654bf37100b199a5
 
-PODFILE CHECKSUM: 27058b84a891cb45f129cfa590376078ad4e707c
+PODFILE CHECKSUM: bf00826e7e6e9af3f32ee2a9eea4305e6149cb1b
 
 COCOAPODS: 1.4.0

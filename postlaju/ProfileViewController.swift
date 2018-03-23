@@ -31,14 +31,29 @@ class ProfileViewController: UIViewController {
     }
     
     @IBOutlet weak var imageview: UIImageView!
+//    {
+//        didSet {
+//
+//            imageView.isUserInteractionEnabled = true
+//            let tap = UITapGestureRecognizer(target: self, action: #selector(findImageButtonTapped))
+//            imageView.addGestureRecognizer(tap)
+//        }
+
+//    }
+    
+    @IBOutlet weak var firstname: UILabel!
+    
+    @IBOutlet weak var lastname: UILabel!
     
     @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var firstname: UILabel!
-    @IBOutlet weak var lastname: UILabel!
     
     @IBAction func editBtn(_ sender: Any) {
     }
     
+    @IBOutlet weak var numberOfIncompleteIdea: UILabel!
+    @IBOutlet weak var numberOfUnstartedIdea: UIImageView!
+    @IBOutlet weak var numberOfInProgressIdea: UILabel!
+    @IBOutlet weak var numberOfCompleteIdea: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,18 +71,16 @@ class ProfileViewController: UIViewController {
     }
     
     func observeCurrentUserInfo() {
-        let donor = Auth.auth().currentUser
-        if let donor = donor {
-            let currentUserID = donor.uid
+        let user = Auth.auth().currentUser
+        if let user = user {
+            let currentUserID = user.uid
             
-            ref.child("Donor").child(currentUserID).observeSingleEvent(of: .value, with: { (snapshot) in
+            ref.child("users").child(currentUserID).observeSingleEvent(of: .value, with: { (snapshot) in
                 guard let value = snapshot.value as? [String : Any] else {return}
-                let profilePicURL = value["DonorProfileURL"] as? String ?? ""
-                
-                self.nameLabel.text = value["Username"] as? String ?? ""
-                self.bloodTypeLabel.text = value["BloodType"] as? String ?? ""
-                self.dateLabel.text = value["LastDonation"] as? String ?? ""
-                self.getImage(profilePicURL, self.profileImageView)
+                self.firstname.text = value["firstname"] as? String ?? ""
+                self.lastname.text = value["lastname"] as? String ?? ""
+                self.email.text = value["email"] as? String ?? ""
+//                self.getImage(profilepic, self.imageview)
                 
             }) { (error) in
                 print(error.localizedDescription)
