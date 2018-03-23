@@ -19,6 +19,7 @@
 		CB18C4A82063FCF60002EB19 /* Gifu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C4A72063FCF60002EB19 /* Gifu.swift */; };
 		CB18C4A920641FB00002EB19 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB18C4AA20641FB00002EB19 /* FLAnimatedImage.framework */; };
 		CB3EDC9D20651B0C005BFAF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */; };
+		CB3EDC9F206539CF005BFAF5 /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EDC9E206539CF005BFAF5 /* GetUser.swift */; };
 		CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22C2062157900F8CC13 /* AppDelegate.swift */; };
 		CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */; };
 		CB96D2322062157900F8CC13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2302062157900F8CC13 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		CB18C4A72063FCF60002EB19 /* Gifu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifu.swift; sourceTree = "<group>"; };
 		CB18C4AA20641FB00002EB19 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CB3EDC9E206539CF005BFAF5 /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
 		CB96D2292062157900F8CC13 /* postlaju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = postlaju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB96D22C2062157900F8CC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB3EDCA020653F92005BFAF5 /* Authenthication */ = {
+			isa = PBXGroup;
+			children = (
+				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
+				CB96D25120622B8500F8CC13 /* SignupViewController.swift */,
+			);
+			path = Authenthication;
+			sourceTree = "<group>";
+		};
+		CB3EDCA120653FB4005BFAF5 /* Idea */ = {
+			isa = PBXGroup;
+			children = (
+				CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */,
+				CB18C49D20636B540002EB19 /* IdeaTableViewCell.swift */,
+				CB18C49B206363C10002EB19 /* Idea.swift */,
+				CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */,
+				CBECBD71206249E300058511 /* AddViewController.swift */,
+				CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */,
+				CBECBD73206249FD00058511 /* ExploreViewController.swift */,
+			);
+			path = Idea;
+			sourceTree = "<group>";
+		};
+		CB3EDCA220653FDA005BFAF5 /* FunctionsPods */ = {
+			isa = PBXGroup;
+			children = (
+				CB18C499206363360002EB19 /* GetImage.swift */,
+				CB3EDC9E206539CF005BFAF5 /* GetUser.swift */,
+				CB18C4972062737E0002EB19 /* Alert.swift */,
+				CB18C4A32063F69B0002EB19 /* Pastel.swift */,
+				CB18C4A72063FCF60002EB19 /* Gifu.swift */,
+			);
+			path = FunctionsPods;
+			sourceTree = "<group>";
+		};
 		CB96D2202062157900F8CC13 = {
 			isa = PBXGroup;
 			children = (
@@ -147,19 +184,9 @@
 			children = (
 				CB96D22C2062157900F8CC13 /* AppDelegate.swift */,
 				CB96D2302062157900F8CC13 /* Main.storyboard */,
-				CB18C499206363360002EB19 /* GetImage.swift */,
-				CB18C4972062737E0002EB19 /* Alert.swift */,
-				CB18C4A32063F69B0002EB19 /* Pastel.swift */,
-				CB18C4A72063FCF60002EB19 /* Gifu.swift */,
-				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
-				CB96D25120622B8500F8CC13 /* SignupViewController.swift */,
-				CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */,
-				CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */,
-				CB18C49D20636B540002EB19 /* IdeaTableViewCell.swift */,
-				CB18C49B206363C10002EB19 /* Idea.swift */,
-				CBECBD7720624A4500058511 /* IdeaDetailViewController.swift */,
-				CBECBD71206249E300058511 /* AddViewController.swift */,
-				CBECBD73206249FD00058511 /* ExploreViewController.swift */,
+				CB3EDCA220653FDA005BFAF5 /* FunctionsPods */,
+				CB3EDCA020653F92005BFAF5 /* Authenthication */,
+				CB3EDCA120653FB4005BFAF5 /* Idea */,
 				CBECBD7520624A2300058511 /* ProfileViewController.swift */,
 				CB96D2382062157900F8CC13 /* LaunchScreen.storyboard */,
 				CB18C493206271CA0002EB19 /* GoogleService-Info.plist */,
@@ -358,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB96D25020622B7B00F8CC13 /* LoginViewController.swift in Sources */,
+				CB3EDC9F206539CF005BFAF5 /* GetUser.swift in Sources */,
 				CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */,
 				CB18C49A206363360002EB19 /* GetImage.swift in Sources */,
 				CB18C49E20636B540002EB19 /* IdeaTableViewCell.swift in Sources */,

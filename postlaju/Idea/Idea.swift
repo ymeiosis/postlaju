@@ -18,7 +18,7 @@ class Idea {
     var dislikes : [String : Bool] = [:]
     var comments : [String : Bool] = [:]
     var location : String = ""
-    var timestamp : Int = 0
+    var date : String = ""
     var description : String = ""
     
     init () {
@@ -29,19 +29,21 @@ class Idea {
     
     init(uid : String, dict : [String:Any]) {
         self.uid = uid
-        self.status = dict["status"] as? String ?? "No donorID"
-        self.posterID = dict["posterID"] as? String ?? "No donorID"
+        self.caption = dict["caption"] as? String ?? "No caption"
+        self.status = dict["status"] as? String ?? "No status"
+        
+        self.posterID = dict["posterID"] as? String ?? "No posterID"
         self.postedPicUrl = dict["postedPicUrl"] as? String ?? "No postedPicUrl"
-        self.caption = dict["caption"] as? String ?? "No postedPicUrl"
         self.likes = dict["likes"] as? [String : Bool] ?? [:]
-        self.timestamp = dict["timestamp"] as? Int ?? 0
+        self.date = dict["date"] as? String ?? ""
     }
     
     init(uid: String, userDict: [String:Any], dict: [String:Any]) {
         self.uid = uid
         self.status = userDict["status"] as? String ?? "-"
         self.caption = userDict["caption"] as? String ?? "-"
-        self.timestamp = dict["timestamp"] as? Int ?? 0
+        self.date = dict["date"] as? String ?? ""
+        
     }
     
     enum status : String {

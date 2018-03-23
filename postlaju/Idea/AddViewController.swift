@@ -119,7 +119,7 @@ class AddViewController: UIViewController, UINavigationControllerDelegate {
             
             uploadToStorage(image, ideaRef.key)
             
-            let ideaPost : [String : Any] = ["title" : title, "date" : date, "description" : description, "location" : location, "status" : status.rawValue]
+            let ideaPost : [String : Any] = ["caption" : caption, "date" : date, "description" : description, "location" : location, "status" : status.rawValue]
 //            self.ref.child("ideas").child(imagePostUID).child("postedPicUrl").setValue(downloadURL)
             
             ideaRef.setValue(ideaPost)

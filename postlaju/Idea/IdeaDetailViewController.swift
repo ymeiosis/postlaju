@@ -52,7 +52,7 @@ class IdeaDetailViewController: UIViewController {
     func loadDetails() {
         detailtitle.text = selectedIdea.caption
         detaildescription.text = selectedIdea.description
-        date.text = String(selectedIdea.timestamp)
+        date.text = String(selectedIdea.date)
 //        status.text = selectedIdea.status
         detaillikes.text = String(describing: selectedIdea.likes)
         detaildislikes.text = String(describing: selectedIdea.dislikes)
