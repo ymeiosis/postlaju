@@ -18,6 +18,7 @@
 		CB18C4A52063FC980002EB19 /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB18C4A62063FC980002EB19 /* Gifu.framework */; };
 		CB18C4A82063FCF60002EB19 /* Gifu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18C4A72063FCF60002EB19 /* Gifu.swift */; };
 		CB18C4A920641FB00002EB19 /* FLAnimatedImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB18C4AA20641FB00002EB19 /* FLAnimatedImage.framework */; };
+		CB3EDC9D20651B0C005BFAF5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */; };
 		CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22C2062157900F8CC13 /* AppDelegate.swift */; };
 		CB96D22F2062157900F8CC13 /* IdeaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */; };
 		CB96D2322062157900F8CC13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB96D2302062157900F8CC13 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		CB18C4A62063FC980002EB19 /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB18C4A72063FCF60002EB19 /* Gifu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifu.swift; sourceTree = "<group>"; };
 		CB18C4AA20641FB00002EB19 /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CB96D2292062157900F8CC13 /* postlaju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = postlaju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB96D22C2062157900F8CC13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				CB18C4A72063FCF60002EB19 /* Gifu.swift */,
 				CB96D24F20622B7B00F8CC13 /* LoginViewController.swift */,
 				CB96D25120622B8500F8CC13 /* SignupViewController.swift */,
+				CB3EDC9C20651B0C005BFAF5 /* MapViewController.swift */,
 				CB96D22E2062157900F8CC13 /* IdeaListViewController.swift */,
 				CB18C49D20636B540002EB19 /* IdeaTableViewCell.swift */,
 				CB18C49B206363C10002EB19 /* Idea.swift */,
@@ -369,6 +372,7 @@
 				CBECBD7820624A4500058511 /* IdeaDetailViewController.swift in Sources */,
 				CB18C4982062737E0002EB19 /* Alert.swift in Sources */,
 				CB96D22D2062157900F8CC13 /* AppDelegate.swift in Sources */,
+				CB3EDC9D20651B0C005BFAF5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

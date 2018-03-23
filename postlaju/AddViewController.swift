@@ -65,26 +65,6 @@ class AddViewController: UIViewController, UINavigationControllerDelegate {
         present(imagePicker, animated: true, completion: nil)
     }
     
-//    func createIdea() {
-//        guard let caption = addCaption.text,
-//            let location = locationTextField.text,
-//            let posterID = Auth.auth().currentUser,
-//            let timestamp = addDate.text else {return}
-//
-//        if caption.count == 0 {
-//            showAlert(withTitle: "Invalid First Name", message: "Please input First Name")
-//        } else if location.count == 0 {
-//            showAlert(withTitle: "Invalid First Name", message: "Please input First Name")
-//        } else if location.count == 0 {
-//            //show error
-//            showAlert(withTitle: "Invalid Password", message: "Password must contain 6 characters or more")
-//        } else {
-////            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-////                //ERROR HANDLING
-////                if let validError = error {
-////                    self.showAlert(withTitle: "Error", message: validError.localizedDescription)
-////                }
-////
 //
 //                //HANDLE SUCESSFUL CREATION OF USER
 //                if let validUser = Auth.auth().currentUser {
@@ -118,6 +98,22 @@ class AddViewController: UIViewController, UINavigationControllerDelegate {
             let location = locationTextField.text,
             let image = imageView.image {
             
+            if caption.count == 0 {
+                showAlert(withTitle: "No Title", message: "Please input Title")
+            } else if location.count == 0 {
+                showAlert(withTitle: "No location", message: "Please input location")
+            } else if date.count == 0 {
+                //show error
+                showAlert(withTitle: "No date", message: "Please input date")
+            } else {
+                //            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                //                //ERROR HANDLING
+                //                if let validError = error {
+                //                    self.showAlert(withTitle: "Error", message: validError.localizedDescription)
+                //                }
+                //
+
+            
             let ideaRef = self.ref.child("ideas").childByAutoId()
             let status : Idea.status = .Unstarted
             
@@ -134,6 +130,7 @@ class AddViewController: UIViewController, UINavigationControllerDelegate {
             addDescription.text = ""
             locationTextField.text = ""
             imageView.image = UIImage(named: "addCameraImage")
+            }
         }
     }
     

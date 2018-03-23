@@ -30,6 +30,10 @@ class IdeaDetailViewController: UIViewController {
     
     @IBOutlet weak var detailcomments: UILabel!
     
+    @IBAction func saveBtn(_ sender: Any) {
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDetails()
@@ -61,6 +65,10 @@ class IdeaDetailViewController: UIViewController {
 //        self.present(navVc, animated: true, completion: nil)
 //    }
 //    
+}
+
+func saveDetails() {
+
 }
 
 extension IdeaDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
