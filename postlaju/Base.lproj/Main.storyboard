@@ -50,17 +50,26 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tsh-Jh-D5F">
-                                <rect key="frame" x="182" y="542" width="183" height="30"/>
+                                <rect key="frame" x="182" y="524" width="183" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_4822" translatesAutoresizingMaskIntoConstraints="NO" id="A1V-d5-Jn6">
+                                <rect key="frame" x="30" y="94" width="80" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="Fkr-4y-RGU"/>
+                                    <constraint firstAttribute="width" constant="80" id="iWq-EX-LUS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="taQ-Cp-LgS" secondAttribute="bottom" constant="10" id="KHq-ND-VHS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="taQ-Cp-LgS" secondAttribute="trailing" constant="10" id="SSS-Zh-Mee"/>
+                            <constraint firstItem="A1V-d5-Jn6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="SaW-VD-7aI"/>
+                            <constraint firstItem="A1V-d5-Jn6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="znL-Xr-xup"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -943,6 +952,7 @@
     </scenes>
     <resources>
         <image name="1487716858-add-user_81636" width="512" height="512"/>
+        <image name="IMG_4822" width="200" height="1022"/>
         <image name="Idea-Bulb-Transparent-PNG" width="2368" height="2800"/>
         <image name="box" width="1080" height="1920"/>
         <image name="completed" width="1920" height="1080"/>
