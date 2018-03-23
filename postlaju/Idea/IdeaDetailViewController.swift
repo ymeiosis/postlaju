@@ -28,7 +28,20 @@ class IdeaDetailViewController: UIViewController {
     
     @IBOutlet weak var detaildislikes: UILabel!
     
-    @IBOutlet weak var detailcomments: UILabel!
+    @IBOutlet weak var detailcomments: UILabel! {
+        didSet {
+            detailcomments.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(commentLabelTapped))
+            detailcomments.addGestureRecognizer(tap)
+        }
+    }
+    
+    @objc func commentLabelTapped() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "CommentsViewController") as? CommentsViewController else {return}
+        vc.selectedIdea = selectedIdea
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     @IBAction func saveBtn(_ sender: Any) {
     
